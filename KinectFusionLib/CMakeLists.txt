@@ -23,9 +23,9 @@ ENDIF ()
 
 ## OpenCV
 # Optional: Set OpenCV_DIR if you want to use a custom version of OpenCV
-SET("OpenCV_DIR" "/home/guoqing/libraries/opencv_320/share/OpenCV")
+SET("OpenCV_DIR" "/usr/local/include/opencv4")
 
-find_package(OpenCV 3.0 REQUIRED)
+find_package(OpenCV 4.0 REQUIRED)
 if (OpenCV_INCLUDE_DIRS)
     include_directories("${OpenCV_INCLUDE_DIRS}")
     message(STATUS "==> KinectFusionLib Found OpenCV： " ${OpenCV_INCLUDE_DIRS})
@@ -36,7 +36,7 @@ endif (OpenCV_INCLUDE_DIRS)
 # find_package(Eigen3 REQUIRED)
 # NOTICE
 # 注意选择的Eigen库还是使用编译的时候带CUDA支持的吧否则指定报错
-SET("EIGEN3_INCLUDE_DIR" "/home/guoqing/libraries/eigen_333_cuda8/include/eigen3")
+SET("EIGEN3_INCLUDE_DIR" "/usr/local/include/Eigen")
 if (EIGEN3_INCLUDE_DIR)
     include_directories("${EIGEN3_INCLUDE_DIR}")
     message(STATUS "==> KinectFusionLib Found Eigen3： " ${EIGEN3_INCLUDE_DIR})    

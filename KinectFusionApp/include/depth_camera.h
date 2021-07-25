@@ -18,7 +18,7 @@
 #pragma GCC diagnostic ignored "-Wextra"
 #pragma GCC diagnostic ignored "-Weffc++"
 #pragma GCC diagnostic ignored "-Wunused-variable"
-#include <OpenNI.h>
+#include <OpenNI2/OpenNI.h>
 #pragma GCC diagnostic pop
 
 // libRealSense 支持

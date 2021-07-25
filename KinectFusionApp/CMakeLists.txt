@@ -26,9 +26,9 @@ ENDIF ()
 ## OpenCV
 # Optional: Set OpenCV_DIR if you want to use a custom version of OpenCV
 # SET("OpenCV_DIR" "/opt/opencv/share/OpenCV")
-SET("OpenCV_DIR" "/home/guoqing/libraries/opencv_320/share/OpenCV")
+SET("OpenCV_DIR" "/usr/local/include/opencv4")
 
-find_package(OpenCV 3.0 REQUIRED)
+find_package(OpenCV 4.0 REQUIRED)
 if (OpenCV_INCLUDE_DIRS)
     include_directories("${OpenCV_INCLUDE_DIRS}")
     message(STATUS "==> KinectFusionApp Found OpenCV： " ${OpenCV_INCLUDE_DIRS})
@@ -36,7 +36,7 @@ if (OpenCV_INCLUDE_DIRS)
 endif (OpenCV_INCLUDE_DIRS)
 
 ## Eigen3
-SET("EIGEN3_INCLUDE_DIR" "/home/guoqing/libraries/eigen_333_cuda8/include/eigen3")
+SET("EIGEN3_INCLUDE_DIR" "/usr/local/include/Eigen")
 # find_package(Eigen3 REQUIRED)
 if (EIGEN3_INCLUDE_DIR)
     include_directories("${EIGEN3_INCLUDE_DIR}")
@@ -44,8 +44,10 @@ if (EIGEN3_INCLUDE_DIR)
 endif (EIGEN3_INCLUDE_DIR)
 
 ## OpenNI2
+SET("OPENNI2_INCLUDE_DIR"   "/usr/local/include/OpenNI2")
 find_package(openni2)
 if (OPENNI2_FOUND)
+    set("OPENNI2_INCLUDE_DIR"   "/usr/local/include/OpenNI2")
     include_directories("${OPENNI2_INCLUDE_DIR}")
     message(STATUS "==> KinectFusionApp Found OpenNI2： " ${OPENNI2_INCLUDE_DIR})    
 endif (OPENNI2_FOUND)
@@ -53,7 +55,7 @@ endif (OPENNI2_FOUND)
 ## Intel RealSense
 find_package(realsense2 REQUIRED)
 if (realsense2_FOUND)
-    set("realsense_INCLUDE_DIR"   "/usr/include/librealsense2")
+    set("realsense_INCLUDE_DIR"   "/usr/local/include/librealsense2")
     include_directories("${realsense_INCLUDE_DIR}")
     message(STATUS "==> KinectFusionApp Found realsense2 " ${realsense_INCLUDE_DIR})    
 endif (realsense2_FOUND)

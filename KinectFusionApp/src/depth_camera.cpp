@@ -23,10 +23,10 @@
 #pragma GCC diagnostic ignored "-Wall"
 #pragma GCC diagnostic ignored "-Wextra"
 #pragma GCC diagnostic ignored "-Weffc++"
-#include <PS1080.h>
+#include <OpenNI2/PS1080.h>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
-#include <opencv/cv.hpp>
+#include <opencv2/opencv.hpp>
 #pragma GCC diagnostic pop
 
 // =============================================### Pseudo ###

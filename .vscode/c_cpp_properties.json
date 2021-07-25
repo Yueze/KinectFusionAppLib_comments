@@ -6,18 +6,20 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/KinectFusionApp/include",
                 "${workspaceFolder}/KinectFusionLib/include",
-                "/usr/local/cuda-8.0/include",
+                "/usr/local/cuda-11.1/include",
                 "/home/guoqing/libraries/opencv_320/include",
                 "/home/guoqing/libraries/opencv_320/include/opencv",
                 "/home/guoqing/libraries/eigen_333_cuda8/include/eigen3",
-                "/usr/include/openni2",
-                "/usr/include/librealsense2"
+                "/usr/local/include/librealsense2",
+                "/usr/local/include/OpenNI2",
+                "/usr/local/include/opencv4"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
             "cppStandard": "c++14",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
